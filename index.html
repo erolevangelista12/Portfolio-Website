@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio Website (50%)</title>
+  <title>Erol Evangelista's Portfolio</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,30 +13,44 @@
     }
     
     h1 {
-      font-family: 'Garamond', serif;
+      font-family: 'Fantasy', Papyrus;
       font-size: 2em;
-      color: #ffffff;
+      color: #000;
       padding: 10px 15px;
-      border-radius: 20px;
-      background-image: linear-gradient(to bottom right, blue, red);
+      border: 10px solid purple;
+      border-top: none;
+      border-bottom: none;
+      border-right: none;
+      border-radius: 10px;
+      background-color: violet;
     }
     
     h2 {
       font-family: 'Arial', sans-serif;
-      background-image: linear-gradient(to left, yellow, green);
+      border: 5px solid;
+      border-left-color: green;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      background-image: linear-gradient(to left, yellow, #90EE90);
       margin-right: 150px;
       padding: 10px 20px;
       border-radius: 5px;
     }
     h3 {
-      font-family: 'Arial', sans-serif;
-      color: #fff;
+      font-family: 'Cursive', Brush Script MT;
+      color: blue;
+      border: 5px solid;
+      border-left-color: blue;
+      border-top: none;
+      border-right-color: blue;
+      border-bottom: none;
       margin-left: 10px;
       margin-right: 100px;
       font-size: 1.75em;
       padding: 5px 5px;
-      background-image: linear-gradient(to bottom, #87CEEB, blue);
-      border-radius: 50px;
+      background-color: #87CEEB;
+      border-radius: 10px;
     }
     
     p {
@@ -86,22 +100,97 @@
       padding: 80px 20px 20px;
       background-image: linear-gradient(to bottom right, #87CEEB, orange);
     }
-    #downloadButton {
+
+    #contact-form label {
+      border: 6px solid #333;
+      border-top: none;
+      border-right: none;
+      border-bottom: none;
+      font-size: 16px;
+      padding: 5px;
+      border-radius: 5px;
+      color: #333;
+      background-color: #fffacb;
+    }
+
+    #contact-form input, #contact-form textarea {
+      background-color: #f4f2e5;
+      width: 100%;
+      padding: 10px;
+      border: solid 2px;
+      border-radius: 15px;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+    }
+    #contact-form input:focus, #contact-form textarea:focus {
+      background-color: #ecd9ba;
+    }
+
+    #contact-form button {
+      border: 2px solid green;
       font-weight: bold;
-      background-image: linear-gradient(green, #9acd32);
-      color: #fff;
-      text-decoration: none;
-      border: none;
+      background-color: #90EE90;
+      color: green;
       border-radius: 50px;
-      padding: 10px 30px;
+      padding: 10px 50px;
       cursor: pointer;
       transition: background-color 0.3s;
+    }
+
+    #contact-form button:hover {
+      color: white;
+      background-color: green;
+      transform: scale(0.9);
+    }
+
+    .contact-buttons {
+      margin-top: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .contact-buttons a {
+      font-size: 16px;
+      font-weight: bold;
+      display: inline-block;
+      background-color: #ADD8E6;
+      color: #008080;
+      text-decoration: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-right: 10px;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+      transition: background-color 0.3s;
+    }
+
+    .contact-buttons a:hover {
+      color: blue;
+      transform: scale(0.9);
+    }
+
+    #downloadButton {
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      padding: 10px 30px;
+      cursor: pointer;
+      background-image: linear-gradient(to bottom, #9acd32, green);
+      transition: background-image 0.3s;
       display: inline-block;
       margin-top: 20px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 1);
     }
 
     #downloadButton:hover {
-      background-image: linear-gradient(#9acd32, green);
+      background-image: linear-gradient(to bottom, green, #9acd32);
+      border-top: none;
+      border-bottom: 3px solid green;
+      border-right: none;
+      border-left: none;
+      border-radius: 50px;
       transform: scale(1.1);
     }
     footer {
@@ -112,14 +201,12 @@
       padding: 10px 2px;
     }
 
-    /* Media query for tablets */
     @media only screen and (min-width: 600px) and (max-width: 1024px) {
       body {
         font-size: 16px;
       }
     }
 
-    /* Media query for phones */
     @media only screen and (max-width: 599px) {
       body {
         font-size: 14px;
@@ -129,7 +216,6 @@
       }
     }
 
-    /* Media query for large desktops */
     @media only screen and (min-width: 1200px) {
       body {
         font-size: 18px;
@@ -155,8 +241,8 @@
   <section id="home">
     <h2>&#128640; Welcome!</h2>
     <h1>I'm Erol Evangelista! &#128075;&#128526;</h1>
-    <h3>&#128421;Web Developer</h3>
-    <p>I'm Erol Evangelista, a passionate and creative Web Developer with a knack for crafting elegant and functional websites. With several years of experience in the field, I specialize in front-end development, ensuring seamless user experiences and visually stunning designs. My journey in web development began with a deep curiosity for technology and a desire to create impactful digital experiences. I continuously stay updated with the latest trends and technologies in the industry, allowing me to deliver innovative solutions that exceed client expectations. My dedication to excellence and attention to detail drive me to continuously refine my skills and push the boundaries of what's possible in web development. Let's collaborate and bring your vision to life!</p>
+    <h3>&#128421; Web Designer</h3>
+    <p>Hello, and welcome! I'm Erol Evangelista, an aspiring IT student with a passion for technology and innovation. Step inside my digital space to explore my journey and discover the projects that showcase my skills and creativity.</p>
     <a href="https://drive.google.com/file/d/1dV9QKZCnqzIP5gEDMqYjJwrVZMwWKe5Q/view?usp=drivesdk" target="_blank" id="downloadButton">&#128229; Download Resume</a>
   </section>
 
@@ -165,12 +251,56 @@
     <p>I'm currently pursuing my Bachelor's degree in Information Technology at Dalubhasaan ng Lungsod ng Lucena. My fascination with technology started at a young age, and I've been eager to dive deep into the world of IT ever since. I thrive on challenges and enjoy exploring new technologies to expand my knowledge and skills.</p>
     <p>In addition to my academic pursuits, I am an avid learner who actively seeks out opportunities to expand my skills outside of the classroom. I enjoy participating in coding competitions, attending tech meetups, and engaging in online courses to stay updated with the latest developments in the IT industry. My goal is to not only excel academically but also to gain practical experience and contribute meaningfully to the field of information technology.</p>
   </section>
-<p>TO BE CONTINUED...!!!</p>
+
+  <section id="works">
+    <h2>&#128187; Works</h2>
+    <div>
+      <p>Developing responsive websites and web applications using HTML, CSS, and JavaScript.</p>
+    </div>
+    <div>
+      <p>Collaborating with designers and other team members to translate design mockups into functional websites.</p>
+    </div>
+    <div>
+      <p>Troubleshooting and debugging issues to ensure smooth functionality and user experience.</p>
+    </div>
+    <div>
+      <p>Updating and maintaining existing websites, including fixing bugs and adding new features.</p>
+    </div>
+    <div>
+      <p>Staying up-to-date with industry trends and best practices to continually improve skills and techniques.</p>
+    </div>
+  
+  </section>
+
+  <section id="contact">
+    <h2>&#128222; Contact Me</h2>
+    <div class="contact-buttons">
+      <a href="https://www.facebook.com/erolevangelista.IT?mibextid=ZbWKwL" target="_blank">Facebook</a>
+      <a href="mailto:erolevangelista12@gmail.com">Gmail</a>
+      <a href="https://drive.google.com/file/d/1lAYqTanb0etwgaQgs3R8rsMWWpwa6Ol0/view?usp=drivesdk">More...</a>
+    </div>
+    
+    <form id="contact-form">
+      <label for="name">&#128100; Name:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="email">&#128231; Email:</label>
+      <input type="email" id="email" name="email" required><br>
+      <label for="message">&#128172; Message:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br>
+      <button type="submit" id="sendButton">SEND</button>
+    </form>
+    
+  </section>
+
   <footer>
     <h4>&copy; 2024 Erol Evangelista</h4>
   </footer>
 
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      alert("Your message has been sent successfully!");
+    });
+  </script>
 </body>
 </html>
-
-
